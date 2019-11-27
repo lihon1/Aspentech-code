@@ -1,2 +1,2 @@
-'On Error Resume Next
+On Error Resume Next
 msgbox "test"
