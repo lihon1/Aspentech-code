@@ -1,0 +1,47 @@
+name: 'Terraform GitHub Actions'
+on:
+  - pull_request
+jobs:
+  terraform:
+    name: 'Terraform'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@master
+      - name: 'Terraform Format'
+        uses: hashicorp/terraform-github-actions@master
+        with:
+          tf_actions_version: 0.12.16
+          tf_actions_subcommand: 'fmt'
+          tf_actions_working_dir: '.'
+          tf_actions_comment: true
+        env:
+          GITHUB_TOKEN: ${{ Qa7UuFeBLOLbFw.atlasv1.ce99BwXMrIBXUJib8UpDDYndvQzl94OEV9MvvqFjB8GhnlT5NDS7zkn3cpZ2Wa4ryGw }}
+      - name: 'Terraform Init'
+        uses: hashicorp/terraform-github-actions@master
+        with:
+          tf_actions_version: 0.12.16
+          tf_actions_subcommand: 'init'
+          tf_actions_working_dir: '.'
+          tf_actions_comment: true
+        env:
+          GITHUB_TOKEN: ${{ Qa7UuFeBLOLbFw.atlasv1.ce99BwXMrIBXUJib8UpDDYndvQzl94OEV9MvvqFjB8GhnlT5NDS7zkn3cpZ2Wa4ryGw }}
+      - name: 'Terraform Validate'
+        uses: hashicorp/terraform-github-actions@master
+        with:
+          tf_actions_version: 0.12.16
+          tf_actions_subcommand: 'validate'
+          tf_actions_working_dir: '.'
+          tf_actions_comment: true
+        env:
+          GITHUB_TOKEN: ${{ Qa7UuFeBLOLbFw.atlasv1.ce99BwXMrIBXUJib8UpDDYndvQzl94OEV9MvvqFjB8GhnlT5NDS7zkn3cpZ2Wa4ryGw }}
+      - name: 'Terraform Plan'
+        id: 'terraform_plan'
+        uses: hashicorp/terraform-github-actions@master
+        with:
+          tf_actions_version: 0.12.16
+          tf_actions_subcommand: 'plan'
+          tf_actions_working_dir: '.'
+          tf_actions_comment: true
+        env:
+          GITHUB_TOKEN: ${{ Qa7UuFeBLOLbFw.atlasv1.ce99BwXMrIBXUJib8UpDDYndvQzl94OEV9MvvqFjB8GhnlT5NDS7zkn3cpZ2Wa4ryGw }}
