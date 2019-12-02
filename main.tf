@@ -1,10 +1,15 @@
 provider "aws" {
-  profile    = "default"
-  region     = "us-east-2"
+    region           = "us-east-2"
+    access_key  = "AKIA5QMSYXFQMSJ4ZI23"
+    secret_key   = "JAIVt9Uph7ZKC714r6edImzgWeyB4LQRSyIKW22x"
 }
 
-
-resource "aws_instance" "example" {
-  ami = "ami-0d5d9d301c853a04a"
-  instance_type = "t2.micro"
+resource "aws_s3_bucket" "mybucket" {
+  bucket = "test_bucket"
+  acl = "private"
+  
+  tags {
+    Name = "Created by Terraform"
+    Environment = "Dev"
+  }
 }
