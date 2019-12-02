@@ -5,11 +5,11 @@ provider "aws" {
 }
 
 resource "tfe_organization" "test" {
-  name  = "Aspentech-www-prod"
+  name  = "Aspentech-www-test"
   email = "alice.li@aspentech.com"
 }
 
 resource "tfe_workspace" "test" {
-  name         = "Aspentech-code"
-  organization = "Aspentech-www-prod"
+  name         = "Aspentech-test"
+  organization = "Aspentech-www-test"
 }
