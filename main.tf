@@ -7,9 +7,4 @@ provider "aws" {
 resource "aws_s3_bucket" "mybucket" {
   bucket = "test_bucket"
   acl = "private"
-  
-  tags {
-    Name = "Created by Terraform"
-    Environment = "Dev"
-  }
 }
