@@ -5,11 +5,13 @@ provider "aws" {
 }
 
 resource "tfe_organization" "test" {
+  hostname = "app.terraform.io"
   name  = "Aspentech-www-prod"
   email = "lhl_0625@163.com"
 }
 
 resource "tfe_workspace" "test" {
+  hostname = "app.terraform.io"
   name         = "Aspentech-code"
   organization = "Aspentech-www-prod"
 }
