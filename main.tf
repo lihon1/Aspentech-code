@@ -3,7 +3,7 @@ terraform {
     hostname = "app.terraform.io"
     organization = "Aspentech-www-prod"
     workspaces {
-      name = "Aspentech-code"
+      name = "Aspentech-test"
     }
   }
 }
