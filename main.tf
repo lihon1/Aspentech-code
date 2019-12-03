@@ -6,7 +6,7 @@ provider "aws" {
 
 resource "tfe_organization" "test" {
   name  = "Aspentech-www-prod"
-  email = "alice.li@aspentech.com"
+  email = "lhl_0625@163.com"
 }
 
 resource "tfe_workspace" "test" {
