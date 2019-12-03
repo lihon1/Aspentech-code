@@ -4,5 +4,7 @@ provider "aws" {
     secret_key   = "JAIVt9Uph7ZKC714r6edImzgWeyB4LQRSyIKW22x"
 }
 
-
+resource "aws_resource_group" "example" {
+ name = "awsresourceexample"
+}
 
