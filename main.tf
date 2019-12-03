@@ -4,9 +4,5 @@ provider "aws" {
     secret_key   = "JAIVt9Uph7ZKC714r6edImzgWeyB4LQRSyIKW22x"
 }
 
-resource "aws_s3_bucket" "example" {
- bucket = "terraform-getting-started-guide"
- acl    = "private"
-}
 
 
