@@ -12,6 +12,6 @@ resource "azurerm_resource_group" "TFResourceGroup" {
     location = "eastus"
 
     tags = {
-        environment = "Terraform Sandbox"
+        environment = "TF Sandbox"
     }
 }
