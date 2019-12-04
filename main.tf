@@ -14,6 +14,3 @@ resource "tfe_workspace" "test" {
   organization = "Aspentech-www-prod"
 }
 
-resource "tfe_organization_token" "test" {
-  organization = "Aspentech-www-prod"
-}
