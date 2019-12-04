@@ -4,12 +4,12 @@ provider "aws" {
     secret_key   = "Mz8EK+gfUMNOy0GpC2dqSoWtSBM68qAbWhs7fQSu4vXAmy"
 }
 
-resource "tfe_organization" "example" {
+resource "tfe_organization" "example_organization" {
   name  = "Aspentech-www-prod"
   email = "lhl_0625@163.com"
 }
 
-resource "tfe_workspace" "test" {
+resource "tfe_workspace" "example_workspace" {
   name         = "Aspentech-code"
   organization = "Aspentech-www-prod"
 }
