@@ -11,5 +11,5 @@ resource "tfe_organization" "test" {
 
 resource "tfe_workspace" "test" {
   name         = "Aspentech-code"
-  organization = "Aspentech-www-prod"
+  organization = "Aspentech-www-prod"  
 }
