@@ -4,7 +4,7 @@ provider "aws" {
     secret_key   = "Mz8EK+gfUMNOy0GpC2dqSoWtSBM68qAbWhs7fQSu4vXAmy"
 }
 
-resource "tfe_organization" "test" {
+resource "tfe_organization" "example" {
   name  = "Aspentech-www-prod"
   email = "lhl_0625@163.com"
 }
