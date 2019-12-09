@@ -15,3 +15,13 @@ resource "azurerm_resource_group" "TFResourceGroup" {
         environment = "This is Terraform Sandbox"
     }
 }
+
+#Define terraform variables
+variable "db_read_capacity" {
+  type    = list(string)
+  default = ["2"]
+}
+variable "db_write_capacity" {
+  type    = list(string)
+  default = ["1"]
+}
