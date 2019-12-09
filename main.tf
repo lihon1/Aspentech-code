@@ -31,5 +31,5 @@ resource "tfe_variable" "test" {
   key          = "db_read_capacity"
   value        = "2"
   category     = "terraform"
-  workspace_id = "${ws-YNfExSrWMpdbJmcu}"
+  workspace_id = "ws-YNfExSrWMpdbJmcu"
 }
