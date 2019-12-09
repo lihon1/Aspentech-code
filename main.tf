@@ -30,6 +30,11 @@ resource "tfe_workspace" "example_workspace" {
 resource "tfe_variable" "test" {
   key          = "db_read_capacity"
   value        = "2"
+  category     = "terraform"
+  workspace_id = "${ws-YNfExSrWMpdbJmcu}"
+}
+
+resource "tfe_variable2" "test" {
   key          = "db_write_capacity"
   value        = "1"
   category     = "terraform"
