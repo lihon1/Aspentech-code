@@ -16,12 +16,27 @@ resource "azurerm_resource_group" "TFResourceGroup" {
     }
 }
 
-#Define terraform variables
-variable "db_read_capacity" {
-  type    = list(string)
-  default = ["2"]
+# Define terraform variables
+resource "tfe_organization" "example_organization" {
+  name  = "Aspentech-www-prod"
+  email = "lhl_0625@163.com"
 }
-variable "db_write_capacity" {
-  type    = list(string)
-  default = ["1"]
+
+resource "tfe_workspace" "example_workspace" {
+  name         = "Aspentech-code"
+  organization = "Aspentech-www-prod"
+}
+
+resource "tfe_variable" "test" {
+  key          = "db_read_capacity"
+  value        = "2"
+  category     = "terraform"
+  workspace_id = "${ws-YNfExSrWMpdbJmcu}"
+}
+
+resource "tfe_variable" "test" {
+  key          = "db_write_capacity"
+  value        = "1"
+  category     = "terraform"
+  workspace_id = "${ws-YNfExSrWMpdbJmcu}"
 }
