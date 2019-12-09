@@ -17,9 +17,12 @@ resource "azurerm_resource_group" "TFResourceGroup" {
 }
 
 # Define terraform variables
-resource "tfe_variable" "test" {
-  key          = "db_read_capacity"
-  value        = "2"
-  category     = "terraform"
-  workspace_id = "Aspentech-www-prod/Aspentech-code"
+terraform {
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "Aspentech-www-prod"
+    workspaces {
+      name = "first-example"
+    }
+  }
 }
