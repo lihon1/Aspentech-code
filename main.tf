@@ -1,10 +1,10 @@
 # Define terraform variables
-terraform {
-  backend "remote" {
-    hostname = "app.terraform.io"
-    organization = "Aspentech-www-prod"
-    workspaces {
-      name = "first-example"
-    }
-  }
+resource "tfe_organization" "example_organization" {
+  name  = "Aspentech-www-prod"
+  email = "lhl_0625@163.com"
+}
+
+resource "tfe_workspace" "example_workspace" {
+  name         = "first"
+  organization = "Aspentech-www-prod"
 }
