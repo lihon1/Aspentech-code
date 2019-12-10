@@ -10,8 +10,7 @@ provider "azurerm" {
 resource "azurerm_resource_group" "TFResourceGroup" {
     name     = "myTFResourceGroup"
     location = "eastus"
-
     tags = {
-        environment = "Terraform Sandbox"
+        environment = "It is Terraform Sandbox"
     }
 }
