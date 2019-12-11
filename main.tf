@@ -6,11 +6,11 @@ provider "azurerm" {
     tenant_id       = "fc489f72-fbbd-411f-af53-8b24d242161e"
 }
 
-# Create a new resource group
+# Configure a new resource group
 resource "azurerm_resource_group" "TFResourceGroup" {
     name     = "myTFResourceGroup"
     location = "eastus"
     tags = {
-        environment = "It is Terraform Sandbox"
+        environment = "This is Terraform Sandbox"
     }
 }
