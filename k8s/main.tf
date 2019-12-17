@@ -12,6 +12,6 @@ resource "azurerm_resource_group" "k8s" {
     location = "Central US"
 
     tags = {
-        environment = "For Development"
+        environment = "Development"
     }
 }
