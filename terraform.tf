@@ -8,7 +8,7 @@ provider "azurerm" {
 
 # Configure a new resource group
 resource "azurerm_resource_group" "TFResourceGroup" {
-    name     = "TerraformResourceGroup"
+    name     = "myTerraformResourceGroup"
     location = "eastus"
     tags = {
         environment = "Terraform Sandbox"
